@@ -1,0 +1,151 @@
+/* Bulk Sync Styles */
+.bulk-sync-info {
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.bulk-sync-info p {
+    margin: 5px 0;
+}
+
+.bulk-sync-controls {
+    margin-bottom: 20px;
+}
+
+.bulk-sync-controls button {
+    margin-right: 10px;
+}
+
+/* Progress Bar */
+.progress-bar-container {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 25px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #0073aa, #005a87);
+    transition: width 0.3s ease;
+    border-radius: 3px;
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #333;
+    font-weight: bold;
+    font-size: 12px;
+    z-index: 1;
+}
+
+/* Status and Results */
+.sync-status {
+    margin-bottom: 15px;
+}
+
+.sync-status .notice {
+    margin: 0;
+}
+
+.sync-results {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+    padding: 10px;
+}
+
+.batch-results {
+    margin-bottom: 10px;
+}
+
+.batch-results:last-child {
+    margin-bottom: 0;
+}
+
+.result-item {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 13px;
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-item.success {
+    color: #046b1b;
+}
+
+.result-item.error {
+    color: #d63638;
+}
+
+.result-icon {
+    width: 20px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.result-user {
+    min-width: 120px;
+    font-weight: 500;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.result-message {
+    flex: 1;
+    opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .result-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 0;
+    }
+    
+    .result-user {
+        margin-right: 0;
+        margin-bottom: 3px;
+    }
+    
+    .result-message {
+        margin-left: 20px;
+    }
+}
+
+/* Loading states */
+.bulk-sync-controls button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Empty state */
+.sync-results:empty::before {
+    content: "Sync results will appear here...";
+    color: #666;
+    font-style: italic;
+    display: block;
+    text-align: center;
+    padding: 20px;
+} 

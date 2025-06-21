@@ -1,0 +1,115 @@
+/**
+ * Amelia Auto Customer Sync - Users Table Column Styles
+ * 
+ * Styles for the custom "Amelia Sync" column in WordPress Users admin table
+ */
+
+/* Main wrapper for sync column content */
+.amelia-sync-wrapper {
+    white-space: nowrap;
+    min-width: 120px;
+}
+
+/* Sync status display */
+.amelia-sync-status {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 4px;
+    line-height: 1.3;
+}
+
+.amelia-sync-status.amelia-synced {
+    color: #46b450; /* WordPress green */
+    font-weight: 500;
+}
+
+.amelia-sync-status small {
+    color: #666;
+    font-weight: normal;
+}
+
+/* Not available/disabled state */
+.amelia-sync-na {
+    color: #666;
+    font-style: italic;
+    font-size: 12px;
+}
+
+/* Sync buttons */
+.amelia-sync-btn {
+    font-size: 11px;
+    line-height: 1.4;
+    padding: 2px 8px;
+    height: auto;
+    min-height: 24px;
+}
+
+.amelia-sync-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Feedback area */
+.amelia-sync-feedback {
+    margin-top: 4px;
+    font-size: 12px;
+    line-height: 1.3;
+}
+
+/* Loading spinner */
+.amelia-sync-spinner {
+    color: #666;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.amelia-sync-spinner .spinner {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    float: none;
+    visibility: visible;
+}
+
+/* Success message */
+.amelia-sync-success {
+    color: #46b450; /* WordPress green */
+    font-weight: 500;
+}
+
+/* Error message */
+.amelia-sync-error {
+    color: #dc3232; /* WordPress red */
+    font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 782px) {
+    .amelia-sync-wrapper {
+        white-space: normal;
+        min-width: auto;
+    }
+    
+    .amelia-sync-btn {
+        font-size: 12px;
+        padding: 4px 10px;
+        min-height: 28px;
+    }
+    
+    .amelia-sync-status,
+    .amelia-sync-feedback {
+        font-size: 13px;
+    }
+}
+
+/* Table column header styling */
+.wp-list-table .column-amelia_sync {
+    width: 140px;
+}
+
+@media screen and (max-width: 782px) {
+    .wp-list-table .column-amelia_sync {
+        width: auto;
+    }
+} 

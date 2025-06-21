@@ -1,0 +1,43 @@
+{
+    "name": "sparkwebstudio/amelia-auto-customer-sync",
+    "description": "WordPress plugin that automatically creates Amelia customers when users with supported roles log in or register. Features admin settings, manual sync interface, and WP-CLI support.",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "version": "1.2.0",
+    "homepage": "https://sparkwebstudio.com/plugins/amelia-auto-customer-sync",
+    "authors": [
+        {
+            "name": "SPARKWEB Studio",
+            "email": "support@sparkwebstudio.com",
+            "homepage": "https://sparkwebstudio.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "AmeliaAutoCustomerSync\\": "src/"
+        }
+    },
+    "keywords": [
+        "wordpress",
+        "plugin",
+        "amelia",
+        "customer",
+        "sync",
+        "booking",
+        "automation",
+        "users",
+        "roles",
+        "ajax",
+        "cli",
+        "admin"
+    ],
+    "support": {
+        "email": "support@sparkwebstudio.com",
+        "source": "https://github.com/sparkwebstudio/amelia-auto-customer-sync",
+        "docs": "https://sparkwebstudio.com/plugins/amelia-auto-customer-sync/docs"
+    }
+} 
